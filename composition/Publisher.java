@@ -2,22 +2,22 @@ package composition;
 
 import java.util.ArrayList;
 
-public class Editor {
+public class Publisher {
   private String name;
-  private String institution;
+  private String location;
   private ArrayList<Publication> publications;
 
-  public Editor(String name, String institution) {
+  public Publisher(String name, String location) {
     setName(name);
-    setInstitution(institution);
+    setLocation(location);
     publications = new ArrayList<Publication>();
   }
 
   public String getName() {return name;}
   public void setName(String _name) {name = _name;}
 
-  public String getInstitution() {return institution;}
-  public void setInstitution(String _institution) {institution = _institution;}
+  public String getLocation() {return location;}
+  public void setLocation(String _location) {location = _location;}
 
   public void addPublication(Publication ...publications) {
     for (Publication p : publications) {
@@ -26,6 +26,6 @@ public class Editor {
   }
 
   public String toString() {
-    return "Editor Name: "+name+"\nEditor's Institution: "+institution+"\n";
+    return "Publisher Name: "+name+"\nPublisher's Location: "+location+"\n";
   }
 }
