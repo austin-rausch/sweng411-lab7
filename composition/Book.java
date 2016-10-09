@@ -6,9 +6,8 @@ public class Book extends Publication {
   private ArrayList <Chapter> chapters;
   private ArrayList <EditionOfBook> editions;
 
-  public Book (String _title) {
-    // null as second parameter because book constructor does not need publisher
-    super(_title, null);
+  public Book (String _title, Publisher _p) {
+    super(_title, _p);
     chapters = new ArrayList <Chapter> ();
     editions = new ArrayList <EditionOfBook> ();
   }
