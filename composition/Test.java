@@ -50,7 +50,7 @@ public class Test {
 
     public static void initializeSEBooks() {
 
-        Book softwareEngineering = new Book("Software Engineering");
+        Book softwareEngineering = new Book("Software Engineering", null);
 
         softwareEngineering.setPublisher(springer);
         springer.addPublication(softwareEngineering);
@@ -119,24 +119,24 @@ public class Test {
     }
 
     public static void myIEMagzines() {
-        List<CopyOfIssueOfMagzine> IEMagzineOnMyShelf = new LinkedList<CopyOfIssueOfMagzine>();
+        List<CopyOfIssueOfMagazine> IEMagzineOnMyShelf = new LinkedList<CopyOfIssueOfMagazine>();
 
         String bcode = "mag-11111111";
-        CopyOfIssueOfMagzine acopy = new CopyOfIssueOfMagzine(bcode);
+        CopyOfIssueOfMagazine acopy = new CopyOfIssueOfMagazine(bcode);
         IEMagzineOnMyShelf.add(acopy);
         IEvolumes[0].getIssueOfMagazine(3).addCopyOfMagazine(acopy);
 
         bcode = "mag-22222222";
-        acopy = new CopyOfIssueOfMagzine(bcode);
+        acopy = new CopyOfIssueOfMagazine(bcode);
         IEMagzineOnMyShelf.add(acopy);
         IEvolumes[1].getIssueOfMagazine(3).addCopyOfMagazine(acopy);
 
         bcode = "mag-33333333";
-        acopy = new CopyOfIssueOfMagzine(bcode);
+        acopy = new CopyOfIssueOfMagazine(bcode);
         IEMagzineOnMyShelf.add(acopy);
         IEvolumes[2].getIssueOfMagazine(3).addCopyOfMagazine(acopy);
 
-        ListIterator<CopyOfIssueOfMagzine> editionIterator = IEMagzineOnMyShelf.listIterator();
+        ListIterator<CopyOfIssueOfMagazine> editionIterator = IEMagzineOnMyShelf.listIterator();
         int i=0;
         while(editionIterator.hasNext()){
             i=i+1;
