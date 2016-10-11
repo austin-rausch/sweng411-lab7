@@ -26,6 +26,6 @@ public class Author {
   }
 
   public String toString() {
-    return "Author name: "+name+"\nAuthor citizenship: "+citizenship+"\n";
+    return "Name: "+name+"\tCitizenship: "+citizenship+"\n";
   }
 }

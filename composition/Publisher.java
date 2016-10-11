@@ -26,6 +26,6 @@ public class Publisher {
   }
 
   public String toString() {
-    return "Publisher Name: "+name+"\nPublisher's Location: "+location+"\n";
+    return "Publisher: "+name+"\tLocation: "+location+"\n";
   }
 }

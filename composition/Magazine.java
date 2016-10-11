@@ -12,7 +12,7 @@ public class Magazine extends Publication {
 	private ArrayList<Volume> volumes;
 
 	public Magazine(String _name, String _issn, String _foundingYear){
-		super(_name, null);	//implemented in Test.java as 
+		super(_name, null);	//implemented in Test.java as
 							//subsequent set methods
 		setFoundingYear(_foundingYear);
 		setIssn(_issn);
@@ -43,11 +43,9 @@ public class Magazine extends Publication {
 	}
 
 	public String toString(){
-		//Call toString of super object
-		String msg = super.toString() + "\n\nMagazines:\n";
-		msg += "Founding year:\t" + this.getFoundingYear();
-		msg += "\n";
-		msg += "ISSN:\t" + this.getIssn();
-		return msg;
+		String msg = super.toString();
+		msg += "\nISSN: " + this.getIssn();
+		msg += "\nFounding year: " + this.getFoundingYear();
+		return msg + "\n\n";
 	}
 }

@@ -34,6 +34,24 @@ public class Publication {
   }
 
   public String toString() {
-    return "Publication name: "+name+"\n";
+    String authorStrings = "";
+    for (Author author : authors) {
+      authorStrings += "\t" + author.toString();
+    }
+
+    String editorStrings = "";
+    if (editors.size() > 0) {
+      for (Editor editor : editors) {
+        editorStrings += "\t" + editor.toString();
+      }
+      editorStrings = "\nEditor(s):\n" + editorStrings;
+    }
+
+    return (
+      "Publication name: "+name
+      + "\n" + publisher.toString()
+      + "\nAuthor(s):\n"+authorStrings
+      + editorStrings
+      + "");
   }
 }

@@ -9,7 +9,6 @@ public class Test {
     private static Volume IEvolumes[] = new Volume[3];
 
     public static void main(String[] args) {
-
         initializeSEBooks();
         mySEBooks();
         initializeIEMagzine();
@@ -29,7 +28,7 @@ public class Test {
 
         editors[0] = new Editor("Bill Gates", "Microsoft");
         editors[1] = new Editor("Jose Jones", "Center for Better Writing");
-        editors[2] = new Editor("Man Super", "Penn State Behrend");
+        editors[2] = new Editor("Mans Super", "Penn State Behrend");
 
         for (int i = 0; i < 3; i++) {
             iexplore.addEditor(editors[i]);
@@ -124,24 +123,24 @@ public class Test {
         String bcode = "mag-11111111";
         CopyOfIssueOfMagazine acopy = new CopyOfIssueOfMagazine(bcode);
         IEMagzineOnMyShelf.add(acopy);
-        IEvolumes[0].getIssueOfMagazine(3).addCopyOfMagazine(acopy);
+        IEvolumes[0].getIssueOfMagazine(3).addCopyOfMagazineIssue(acopy);
 
         bcode = "mag-22222222";
         acopy = new CopyOfIssueOfMagazine(bcode);
         IEMagzineOnMyShelf.add(acopy);
-        IEvolumes[1].getIssueOfMagazine(3).addCopyOfMagazine(acopy);
+        IEvolumes[1].getIssueOfMagazine(3).addCopyOfMagazineIssue(acopy);
 
         bcode = "mag-33333333";
         acopy = new CopyOfIssueOfMagazine(bcode);
         IEMagzineOnMyShelf.add(acopy);
-        IEvolumes[2].getIssueOfMagazine(3).addCopyOfMagazine(acopy);
+        IEvolumes[2].getIssueOfMagazine(3).addCopyOfMagazineIssue(acopy);
 
         ListIterator<CopyOfIssueOfMagazine> editionIterator = IEMagzineOnMyShelf.listIterator();
         int i=0;
         while(editionIterator.hasNext()){
             i=i+1;
             System.out.println("++++++++++++++++++++++++++++++");
-            System.out.printf("This is my %dth magzine:\n", i);
+            System.out.printf("This is my %dth magazine:\n", i);
             System.out.println(editionIterator.next());
         }
 

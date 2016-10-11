@@ -26,6 +26,6 @@ public class Editor {
   }
 
   public String toString() {
-    return "Editor Name: "+name+"\nEditor's Institution: "+institution+"\n";
+    return "Name: "+name+"\tInstitution: "+institution+"\n";
   }
 }

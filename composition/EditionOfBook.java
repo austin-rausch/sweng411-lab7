@@ -10,7 +10,7 @@ public class EditionOfBook {
   private String isbn;
   private Book ownerBook;
 
-  public EditionOfBook (String _isbn, int _issueQuantity, int _editionNumber) {
+  public EditionOfBook (String _isbn, int _editionNumber, int _issueQuantity) {
     setEditionNumber(_editionNumber);
     setIssueQuantity(_issueQuantity);
     setIsbn(_isbn);
